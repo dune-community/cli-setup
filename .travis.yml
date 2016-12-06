@@ -8,8 +8,7 @@ install:
 
 script:
   - cmake . && sudo make install
-  - for i in setup setup_module setup_only ; do shellcheck /usr/local/bin/dune_${i} ; done
-  - for i in utils.bash ; do shellcheck /usr/local/share/dune/dune_${i} ; done
+  - shellcheck /usr/local/bin/dune_setup* /usr/local/share/dune/dune_*
 
 notifications:
   email: false
