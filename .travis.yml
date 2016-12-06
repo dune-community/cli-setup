@@ -7,9 +7,9 @@ install:
   - sudo chmod +x /usr/bin/shellcheck
 
 script:
+  - cmake . && sudo make install
   - for i in setup setup_module setup_only ; do shellcheck /usr/local/bin/dune_${i} ; done
   - for i in utils.bash ; do shellcheck /usr/local/share/dune/dune_${i} ; done
-  - cmake . && sudo make install
 
 notifications:
   email: false
