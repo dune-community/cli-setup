@@ -4,10 +4,13 @@ sd ()
 {
   eval "$@"
   ret=$?
-  if [ $ret = 0 ] ; then
-          notify-send -t 3000 "done" "$PWD"
-  else
-          notify-send -t 3000 --urgency=critical "FAILED" "$PWD"
+  notify=$(which notify-send)
+  if [ -x "${notify}" ] ; then
+    if [ $ret = 0 ] ; then
+            notify-send -t 3000 "done" "$PWD"
+    else
+            notify-send -t 3000 --urgency=critical "FAILED" "$PWD"
+    fi
   fi
   return $ret
 }
