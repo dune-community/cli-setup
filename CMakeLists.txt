@@ -3,9 +3,9 @@ project("dune-cli-setup" CXX)
 cmake_minimum_required(VERSION 2.8)
 
 set(UTILS_PATH ${CMAKE_INSTALL_PREFIX}/share/dune)
-configure_file(dune_setup dune_setup)
-configure_file(dune_setup_only dune_setup_only)
-configure_file(dune_setup_module dune_setup_module)
+configure_file(dune_setup dune_setup @ONLY)
+configure_file(dune_setup_only dune_setup_only @ONLY)
+configure_file(dune_setup_module dune_setup_module @ONLY)
 
 install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/dune_setup
                  ${CMAKE_CURRENT_BINARY_DIR}/dune_setup_module
