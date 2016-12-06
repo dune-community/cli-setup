@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dune-community/dune-xt-functions.svg?branch=master)](https://travis-ci.org/dune-community/dune-xt-functions)
+
 # Dunecontrol wrapper
 
 for those of us that cannot remember argument call order and/or names
