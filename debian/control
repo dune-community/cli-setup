@@ -1,0 +1,15 @@
+Source: dune-cli-setup
+Section: devel
+Priority: optional
+Maintainer: René Milk <rene.milk@wwu.de>
+Build-Depends: debhelper (>=9), cmake
+Standards-Version: 3.9.6
+Homepage: https://github.com/dune-community/cli-setup
+Vcs-Git: https://github.com/dune-community/cli-setup.git
+Vcs-Browser: https://github.com/dune-community/cli-setup
+
+Package: dune-cli-setup
+Architecture: all
+Depends: ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>

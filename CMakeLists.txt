@@ -13,3 +13,4 @@ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/dune_setup
         DESTINATION ${CMAKE_INSTALL_PREFIX}/bin )
 install(FILES dune_utils.bash
         DESTINATION ${UTILS_PATH} )
+
