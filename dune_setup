@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
 . @UTILS_PATH@/dune_utils.bash
 getOptsFile "${1}"
-sd ./dune-common/bin/dunecontrol --opts="${1}" all
+set -e
+sd ./dune-common/bin/dunecontrol ${USE_CMAKE} --opts="${1}" all

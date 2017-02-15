@@ -42,3 +42,11 @@ if [[ $OPTS == *"icc"* ]]
 then
   check_source /opt/intel.PATH
 fi
+
+./dune-common/bin/dunecontrol --use-cmake info &> /dev/null
+if [[ $? == 0 ]]
+then
+    USE_CMAKE="--use-cmake"
+else
+    USE_CMAKE=""
+fi
