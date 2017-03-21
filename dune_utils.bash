@@ -46,7 +46,7 @@ fi
 ./dune-common/bin/dunecontrol --use-cmake info &> /dev/null
 if [[ $? == 0 ]]
 then
-    USE_CMAKE="--use-cmake"
+    export USE_CMAKE="--use-cmake"
 else
-    USE_CMAKE=""
+    export USE_CMAKE=""
 fi
