@@ -43,8 +43,7 @@ then
   check_source /opt/intel.PATH
 fi
 
-./dune-common/bin/dunecontrol --use-cmake info &> /dev/null
-if [[ $? == 0 ]]
+if ./dune-common/bin/dunecontrol --use-cmake info &> /dev/null
 then
     export USE_CMAKE="--use-cmake"
 else
