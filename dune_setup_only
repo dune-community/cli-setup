@@ -3,4 +3,5 @@
 . @UTILS_PATH@/dune_utils.bash
 getOptsFile "${2}"
 set -e
-sd ./dune-common/bin/dunecontrol ${USE_CMAKE} --only="${1}" --opts="${OPTS}" all
+sd ./dune-common/bin/dunecontrol ${USE_CMAKE} --only="${1}" --opts="${OPTS}" all |& tee >(grep "cmake -DCMAKE_MODULE_PATH" > clion.in)
+
